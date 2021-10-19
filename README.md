@@ -56,8 +56,8 @@ npm start run
 ```
 <p>Agora basta apenas acessar seu localhost na porta 8000 e ter sua experiância com a aplicação!</p>
 
-<!-- ### ⚙️ Executando os testes
-A implementação dos testes de unidade  foi feita utilizando o framework de teste para React chamado ... e foram implementadas os seguintes casos de teste: App.test.js, setupTests.js.
+### ⚙️ Executando os testes
+A implementação dos testes de unidade  foi feita utilizando o framework de teste para React chamado Jest e foram implementadas os casos de teste para front-end e back-end.
 
 **Para execução dos testes via uma IDE, basta executar o arquivo que contém os testes.**
 
@@ -65,16 +65,9 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
 
 **1°)** Garanta que o terminal esteja aberto na pasta do projeto;
 
-**2°)** Execute o comando a seguir especificando o caminho até os diretórios contendo os testes os testes: npm test -->
+**2°)** No diretório src, execute o comando a seguir para verificação de renderização correta das telas: npm run App.test.js
 
-  
-<!-- ### Lista de testes implementados com seus respectivos objetivos:
-
-**Na classe ...**:
-
-- **test_...**: ...
-
-... -->
+...
 
 
 
