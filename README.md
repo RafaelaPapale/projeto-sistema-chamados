@@ -46,14 +46,18 @@ npm install -g create-react-app
 ```
 - Ativação do gerenciamento de dependências:
 <p>Após a instalação, garanta que o terminal esteja no diretório da pasta principal do projeto. Para instalar as bibliotecas empregadas no projeto é necessário inserir o comando:</p>
+
 ```
 npm install -g yarn
 ```
+
 - Execução:
 <p>Para execução do servidor do projeto e acesso a API: </p>
+
 ```
 npm start run
 ```
+
 <p>Agora basta apenas acessar seu localhost na porta 8000 e ter sua experiância com a aplicação!</p>
 
 ### ⚙️ Executando os testes
