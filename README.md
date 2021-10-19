@@ -65,7 +65,7 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
 
 **1°)** Garanta que o terminal esteja aberto na pasta do projeto;
 
-**2°)** No diretório src, execute o comando a seguir para verificação de renderização correta das telas: npm run App.test.js
+**2°)** No diretório base do projeto, execute o comando a seguir para verificação de renderização correta das telas: npm test.
 
 ...
 
