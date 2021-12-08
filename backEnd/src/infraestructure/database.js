@@ -22,7 +22,7 @@ const UsersSchema = new Schema({
     avatarUrl: String,
 });
 
-const SeriesModel = mongoose.model('UsersModel', UsersSchema);
+const UsersModel = mongoose.model('UsersModel', UsersSchema);
 
 const CustomersSchema = new Schema({
     id: {
@@ -38,7 +38,7 @@ const CustomersSchema = new Schema({
     cnpj: String,
 });
 
-const SeriesModel = mongoose.model('CustomersModel', CustomersSchema);
+const CustomersModel = mongoose.model('CustomersModel', CustomersSchema);
 
 const ChamadosSchema = new Schema({
     id: {
@@ -55,11 +55,11 @@ const ChamadosSchema = new Schema({
     status: String,
 });
 
-const SeriesModel = mongoose.model('ChamadosModel', ChamadosSchema);
+const ChamadosModel = mongoose.model('ChamadosModel', ChamadosSchema);
 
 module.exports = {
-    UsersSchema,
-    CustomersSchema,
-    ChamadosSchema,
+    UsersModel,
+    CustomersModel,
+    ChamadosModel,
     mongoose,
 };
