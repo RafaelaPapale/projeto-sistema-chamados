@@ -5,7 +5,7 @@ module.exports = {
         },
         type: 'string',
     },
-    password: {
+    senha: {
         presence: {
             allowEmpty: false,
         },
