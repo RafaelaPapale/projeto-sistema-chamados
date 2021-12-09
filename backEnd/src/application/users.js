@@ -31,8 +31,8 @@ const Users = {
                 return validation;
             }
 
-            const response = await UsersRepository.auth(data.nome, data.senha);
-            if(response.length === 0) {
+            const response = await UsersRepository.auth(data.email, data.senha);
+            if(response === null) {
                 const result = Constants.ErrorNotFound;
                 return result;
             }   

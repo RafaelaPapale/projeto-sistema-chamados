@@ -1,7 +1,6 @@
 const { UsersModel } = require('../../infraestructure/database');
 
 const UsersRepository = {
-
     async create(data) {
         try {
             const model = new UsersModel(data);
@@ -15,7 +14,7 @@ const UsersRepository = {
     async update(data) {
         try {
             const update = {
-                nome: data.name,
+                nome: data.nome,
             };
             const options = { new: true };
             const filter = { id: data.id, email: data.email };
@@ -36,9 +35,9 @@ const UsersRepository = {
         }
     },
 
-    async auth(nome, senha) {
+    async auth(email, senha) {
         try {
-            const response = await UsersModel.findOne({ nome, senha }).exec();
+            const response = await UsersModel.findOne({ email, senha }, 'data -_id').exec();
             return response;
         } catch (e) {
             return e;
