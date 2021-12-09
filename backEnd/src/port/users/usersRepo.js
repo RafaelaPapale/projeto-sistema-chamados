@@ -37,8 +37,8 @@ const UsersRepository = {
 
     async auth(email, senha) {
         try {
-            const response = await UsersModel.findOne({ email, senha }, 'data -_id').exec();
-            return response;
+            const response = await UsersModel.findOne({ email, senha });
+            return response.toObject();
         } catch (e) {
             return e;
         }

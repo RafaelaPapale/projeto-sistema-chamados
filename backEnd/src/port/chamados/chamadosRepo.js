@@ -43,8 +43,8 @@ const UsersRepository = {
 
     async listByUser(userId) {
         try {
-            const response = await ChamadosModel.find({ userId }).exec();
-            return response.toObject();
+            const response = await ChamadosModel.find({ userId });
+            return response;
         } catch (e) {
             return e;
         }

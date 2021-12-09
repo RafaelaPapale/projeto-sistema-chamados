@@ -36,6 +36,7 @@ const Users = {
                 const result = Constants.ErrorNotFound;
                 return result;
             }   
+            delete response.senha;
             return response;
         } catch (error) {
             return error;
