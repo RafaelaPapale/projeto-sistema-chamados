@@ -43,8 +43,7 @@ const UsersRepository = {
 
     async listByUser(userId) {
         try {
-            const response = await ChamadosModel.find({ userId }, 'data -_id').exec();
-            if(response === null) return []
+            const response = await ChamadosModel.find({ userId }).exec();
             return response.toObject();
         } catch (e) {
             return e;
@@ -53,7 +52,7 @@ const UsersRepository = {
 
     async listById(id) {
         try {
-            const response = await ChamadosModel.findOne({ id }, 'data -_id').exec();
+            const response = await ChamadosModel.findOne({ id }).exec();
             return response.toObject();
         } catch (e) {
             return e;
