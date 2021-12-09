@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const uri = `mongodb+srv://sistema-chamados:${adminadmin}@cluster-chamados.u1wbp.mongodb.net/test`;
+const uri = `mongodb+srv://sistema-chamados:admin@cluster-chamados.u1wbp.mongodb.net/test`;
 
 mongoose.connect(uri, {
     useNewUrlParser: true,
@@ -15,10 +15,12 @@ const UsersSchema = new Schema({
         index: true,
         unique: true,
     },
-    nome: {
+    email: {
         type: String,
         unique: true,
     },
+    nome: String,
+    senha: String,
     avatarUrl: String,
 });
 
