@@ -39,21 +39,21 @@ export default function Chamado() {
                         id: doc.id,
                         nomeFantasia: doc.nomeFantasia
                     })
-
-                    if (lista.length === 0) {
-                        console.log("Nenhuma empresa encontrada");
-                        setLoadCustomers(false);
-                        setCustomers([{ id: 1, nomeFantasia: '' }])
-                        return;
-                    }
-
-                    setCustomers(lista);
-                    setLoadCustomers(false);
-
-                    if (id) {
-                        loadId(lista);
-                    }
                 })
+
+                if (lista.length === 0) {
+                    console.log("Nenhuma empresa encontrada");
+                    setLoadCustomers(false);
+                    setCustomers([{ id: 1, nomeFantasia: '' }])
+                    return;
+                }
+
+                setCustomers(lista);
+                setLoadCustomers(false);
+
+                if (id) {
+                    loadId(lista);
+                }
             }
             else {
                 setLoadCustomers(false);
@@ -127,10 +127,10 @@ export default function Chamado() {
 
         const createChamado = await ClientChamados.createChamado(data);
 
-        if(createChamado.status === 200){
+        if (createChamado.status === 200) {
             toast.success("Chamado registrado com sucesso!");
-                setComplemento('');
-                setCustomerSelected(0);
+            setComplemento('');
+            setCustomerSelected(0);
         }
         else {
             toast.error("Ops! Erro ao registrar chamado!");
