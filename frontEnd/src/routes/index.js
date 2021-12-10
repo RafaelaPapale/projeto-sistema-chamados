@@ -1,27 +1,24 @@
-
-import { Switch } from 'react-router-dom';
+import { Switch } from "react-router-dom";
 import Route from './Route';
 
 import SignIn from '../pages/SignIn';
-import SignUp from '../pages/SignUp';
-
+import SignUp from '../pages/SignUp'
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import Customers from '../pages/Customers';
-import New from '../pages/New';
+import Chamado from '../pages/Chamado';
 
-export default function Routes(){
-  return(
-    <Switch>
-      <Route exact path="/" component={SignIn} />
-      <Route exact path="/register" component={SignUp} />
+export default function Routes() {
+    return (
+        <Switch>
+            <Route exact path="/" component={SignIn} />
+            <Route exact path="/register" component={SignUp} />
 
-      <Route exact path="/dashboard" component={Dashboard} isPrivate />
-      <Route exact path="/profile" component={Profile} isPrivate />
-      <Route exact path="/customers" component={Customers} isPrivate />
-      <Route exact path="/new" component={New} isPrivate />
-      <Route exact path="/new/:id" component={New} isPrivate />
-      
-    </Switch>
-  )
+            <Route exact path="/dashboard" component={Dashboard} isPrivate />
+            <Route exact path="/profile" component={Profile} isPrivate />
+            <Route exact path="/customers" component={Customers} isPrivate />
+            <Route exact path="/new" component={Chamado} isPrivate/>
+            <Route exact path="/new/:id" component={Chamado} isPrivate/>
+        </Switch>
+    )
 }
