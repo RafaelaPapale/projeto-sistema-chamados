@@ -73,7 +73,7 @@ export default function Chamado() {
                 setStatus(findChamados.data.status);
                 setComplemento(findChamados.data.complemento);
 
-                let index = lista.findIndex(item => item.id === findChamados.data.clienteId);
+                let index = lista.findIndex(item => item.id === findChamados.data.clientId);
 
                 setCustomerSelected(index);
                 setIdCustomer(true);
@@ -92,6 +92,7 @@ export default function Chamado() {
         e.preventDefault();
         if (idCustomer) {
             const data = {
+                id: id,
                 cliente: customers[customerSelected].nomeFantasia,
                 clientId: customers[customerSelected].id,
                 assunto: assunto,
@@ -148,6 +149,7 @@ export default function Chamado() {
 
     function handleChangeCustomers(e) {
         e.preventDefault();
+        console.log("handle change customer:", e.target.value);
         setCustomerSelected(e.target.value);
     }
 
