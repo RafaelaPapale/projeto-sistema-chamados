@@ -53,7 +53,7 @@ const ChamadosSchema = new Schema({
     clientId: String,
     userId: String,
     complemento: String, 
-    created: Date,
+    created: String,
     status: String,
 });
 
