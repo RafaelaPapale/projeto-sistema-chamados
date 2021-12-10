@@ -9,12 +9,12 @@ module.exports = (app) => {
         res.status(Utils.responseStatus(response.name));
         res.json(response);
     });
-    app.get(`${route}/listByUser`, async (req, res) => {
+    app.post(`${route}/listByUser`, async (req, res) => {
         const response = await Chamados.listByUser(req.body);
         res.status(Utils.responseStatus(response.name));
         res.json(response);
     });
-    app.get(`${route}/listById`, async (req, res) => {
+    app.post(`${route}/listById`, async (req, res) => {
         const response = await Chamados.listById(req.body);
         res.status(Utils.responseStatus(response.name));
         res.json(response);

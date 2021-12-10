@@ -9,7 +9,7 @@ module.exports = (app) => {
         res.status(Utils.responseStatus(response.name));
         res.json(response);
     });
-    app.get(`${route}/auth`, async (req, res) => {
+    app.post(`${route}/auth`, async (req, res) => {
         const response = await Users.auth(req.body);
         res.status(Utils.responseStatus(response.name));
         res.json(response);
