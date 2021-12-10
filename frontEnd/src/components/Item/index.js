@@ -19,7 +19,7 @@ export default function Item({ conteudo, close }) {
                     </div>
                     <div className="row">
                         <span>Assunto: <i>{conteudo.assunto}</i></span>
-                        <span>Cadastrado em: <i>{conteudo.createdFormated}</i></span>
+                        <span>Cadastrado em: <i>{conteudo.created}</i></span>
                     </div>
                     <div className="row">
                         <span>
