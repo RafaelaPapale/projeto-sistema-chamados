@@ -32,12 +32,6 @@ module.exports = {
     complemento: {
         type: 'string',
     },
-    created: {
-        presence: {
-            allowEmpty: false,
-        },
-        type: 'string',
-    },
     status: {
         presence: {
             allowEmpty: false,

@@ -19,7 +19,6 @@ const UsersRepository = {
                 clientId: data.clientId,
                 userId: data.userId,
                 complemento: data.complemento,
-                created: data.created,
                 status: data.status,
             };
             const options = { new: true };
