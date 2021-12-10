@@ -1,5 +1,5 @@
 import { useState, useEffect, createContext } from "react";
-import firebase from '../services/firebaseConnection';
+import ClientUsers from '../services/user';
 import { toast } from 'react-toastify';
 
 export const AuthContext = createContext({});
@@ -24,62 +24,61 @@ function AuthProvider({ children }) {
 
     async function signIn(email, password) {
         setLoadingAuth(true);
-        await firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(async (value) => {
-                let uid = value.user.uid;
 
-                const userProfile = await firebase.firestore().collection('users')
-                    .doc(uid).get();
+        const data = {
+            email: email,
+            senha: password
+        }
 
-                let data = {
-                    uid: uid,
-                    nome: userProfile.data().nome,
-                    avatarUrl: userProfile.data().avatarUrl,
-                    email: value.user.email
-                };
+        const auth = await ClientUsers.authUser(data);
+        console.log(auth);
+        if (auth.status === 200) {
+            let result = {
+                uid: auth.data.id,
+                nome: auth.data.nome,
+                email: auth.data.email,
+            }
 
-                setUser(data);
-                storageUser(data);
-                setLoadingAuth(false);
-                toast.success('Bem vindo a plataforma!')
-            })
-            .catch((error) => {
-                console.log(error);
-                toast.error("Ops! Algo deu errado!")
-                setLoadingAuth(false);
-            })
+            setUser(result);
+            storageUser(result);
+            setLoadingAuth(false);
+
+            toast.success('Bem vindo de volta!');
+        } else {
+            toast.error('Ops algo deu errado!');
+            alert(auth)
+            setLoadingAuth(false);
+        }
     }
 
     async function signUp(email, password, nome) {
         setLoadingAuth(true);
-        await firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(async (value) => {
-                let uid = value.user.uid;
 
-                await firebase.firestore().collection('users')
-                    .doc(uid).set({
-                        nome: nome,
-                        avatarUrl: null,
-                    })
-                    .then(() => {
-                        let data = {
-                            uid: uid,
-                            nome: nome,
-                            email: value.user.email,
-                            avatarUrl: null
-                        };
+        const data = {
+            nome: nome,
+            email: email,
+            senha: password,
+        }
 
-                        setUser(data);
-                        storageUser(data);
-                        setLoadingAuth(false);
-                        toast.success('Bem vindo a plataforma!')
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                        toast.error("Ops! Algo deu errado!")
-                        setLoadingAuth(false);
-                    })
-            })
+        const create = await ClientUsers.createUser(data);
+        //console.log(create);
+        if (create.status === 200) {
+            let result = {
+                uid: create.data.id,
+                nome: create.data.nome,
+                email: create.data.email,
+            }
+
+            setUser(result);
+            storageUser(result);
+            setLoadingAuth(false);
+
+            toast.success('Bem vindo a plataforma!');
+        } else {
+            toast.error('Ops algo deu errado!');
+            alert(create)
+            setLoadingAuth(false);
+        }
     }
 
     function storageUser(data) {
@@ -88,7 +87,6 @@ function AuthProvider({ children }) {
     }
 
     async function signOut() {
-        await firebase.auth().signOut();
         localStorage.removeItem('SistemUser');
         setUser(null);
     }
