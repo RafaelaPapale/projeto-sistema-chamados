@@ -31,7 +31,7 @@ function AuthProvider({ children }) {
         }
 
         const auth = await ClientUsers.authUser(data);
-        console.log(auth);
+        //console.log(auth);
         if (auth.status === 200) {
             let result = {
                 uid: auth.data.id,
