@@ -57,16 +57,19 @@ $ git clone https://github.com/RafaelaPapale/projeto-sistema-chamados.git
 - BackEnd
 <p>Após clonar, garanta que o terminal esteja no diretório da pasta principal do projeto.
 Depois disso, entre no diretório  "backEnd" através da linha de comando:</p>
+
 ```
 cd backEnd
 ```
 <p>Estando no diretório backEnd, insira o seguinte comando para instalar as bibliotecas:</p>
+
 ```
 npm install
 ```
 
 **Execução:**
 <p>Depois de instalar as bibliotecas,  execute o comando a seguir para subir o backEnd>:</p>
+
 ```
 npm start
 ```
@@ -78,12 +81,14 @@ Depois disso, entre no diretório "frontEnd" através da linha de comando:</p>
 cd frontEnd
 ```
 <p>Estando no diretório frontEnd, insira o seguinte comando para instalar as bibliotecas:</p>
+
 ```
 npm install
 ```
 
 **Execução:**
 <p>Depois de instalar as bibliotecas,  execute o comando a seguir para subir o frontEnd e ter acesso a aplicação:</p>
+
 ```
 npm start
 ```
@@ -101,7 +106,6 @@ A implementação dos testes de unidade e mock foram feitas utilizando o framewo
 ```
  npm test
 ```
-...
 
 ### 📦 Desenvolvimento
   A estrutura de pastas foi feita para atender ao formato esperado pelo React e Node, assim, a estrutura da interface foi colocada na raiz do projeto (arquivos estáticos na pasta Static e arquivos html em Templates). Os demais arquivos foram organizados conforme seu tipo (main e test).
@@ -110,7 +114,7 @@ A implementação dos testes de unidade e mock foram feitas utilizando o framewo
   📂Projeto-Sistemas-Chamados/
       
       📂backEnd/
-          📂unitTest/
+          📂mockTest/
               chamados.test.js
               customers.test.js
               users.test.js
