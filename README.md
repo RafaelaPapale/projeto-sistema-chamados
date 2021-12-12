@@ -94,7 +94,7 @@ npm install
 npm start
 ```
 
-<p>Agora basta apenas acessar seu localhost na porta 5000 e ter sua experiância com a aplicação!</p>
+<p>Agora basta apenas acessar seu localhost na porta 3000 e ter sua experiância com a aplicação!</p>
 
 ### ⚙️ Executando os testes
 A implementação dos testes de unidade e mock foram feitas utilizando o framework de teste para Node.js chamado Jest e foram implementadas os casos de teste para back-end.
