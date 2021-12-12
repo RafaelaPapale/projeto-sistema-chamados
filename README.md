@@ -77,6 +77,7 @@ npm start
 - FrontEnd
 <p>Após executar o backEnd, abra um novo terminal e garanta que o terminal esteja no diretório da pasta principal do projeto.
 Depois disso, entre no diretório "frontEnd" através da linha de comando:</p>
+
 ```
 cd frontEnd
 ```
@@ -272,6 +273,6 @@ O GitHub foi usado para controle de versão. Para as versões disponíveis, obse
 ### 📄 Licença
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://badges.mit-license.org/)
 
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE.txt](https://github.com/SinaraPimenta/Projeto_C214_Armazem_MS/blob/main/LICENSE.txt) para detalhes.
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE.txt](https://github.com/RafaelaPapale/projeto-sistema-chamados/blob/main/LICENSE) para detalhes.
 
 [![CI-Projeto-SistemasChamados](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml)](https://github.com/RafaelaPapale/projeto-sistema-chamados/blob/main/.github/workflows/node.js.yml)
