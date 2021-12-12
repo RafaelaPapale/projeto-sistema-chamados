@@ -26,28 +26,10 @@ const UsersRepository = {
         }
     },
 
-    async delete(id) {
-        try {
-            const response = await UsersModel.deleteOne({ id }).exec();
-            return response.deletedCount;
-        } catch (e) {
-            return e;
-        }
-    },
-
     async auth(email, senha) {
         try {
             const response = await UsersModel.findOne({ email, senha });
             return response.toObject();
-        } catch (e) {
-            return e;
-        }
-    },
-
-    async list() {
-        try {
-            const response = await UsersModel.find({}).exec();
-            return response;
         } catch (e) {
             return e;
         }

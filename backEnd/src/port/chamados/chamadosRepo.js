@@ -31,15 +31,6 @@ const UsersRepository = {
         }
     },
 
-    async delete(id) {
-        try {
-            const response = await ChamadosModel.deleteOne({ id }).exec();
-            return response.deletedCount;
-        } catch (e) {
-            return e;
-        }
-    },
-
     async listByUser(userId) {
         try {
             const response = await ChamadosModel.find({ userId });
