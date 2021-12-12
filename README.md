@@ -12,7 +12,7 @@
 
 - [x] Orientação a objetos (React)
 - [x] Realizar um CRUD completo
-- [x] Permanência de dados (Google Firebase)
+- [x] Permanência de dados (MongoDB Atlas)
 - [x] Ferramenta de controle de versão (Github)
 - [x] Gerenciamento de dependências (npm)
 - [x] Testes de unidade
@@ -67,10 +67,12 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
 
 **Para execução dos testes via terminal:**
 
-**1°)** Garanta que o terminal esteja aberto na pasta do projeto;
+**1°)** Garanta que o terminal esteja aberto no diretório 'backend/tests' do projeto;
 
-**2°)** No diretório base do projeto, execute o comando a seguir para verificação de renderização correta das telas: npm test.
-
+**2°)** Nela deve ser executado o seguinte comando:
+```
+ npm test
+```
 ...
 
 
@@ -81,45 +83,124 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
   Abaixo segue um esboço da estrutura usada:
   
   📂Projeto-Sistemas-Chamados/
+      
+      📂backEnd/
+          📂src/
+              📂application/
+                  📂utils/
+                      constants.js
+                      utils.js
+                      validationChamados.js
+                      validationCustomers.js
+                      validationUsers.js
+                  📂validation/
+                      📂chamados/
+                          create.js
+                          getById.js
+                          getByUser.js
+                          index.js
+                          update.js
+                      📂customers/
+                          create.js
+                          index.js
+                      📂users/
+                          auth.js
+                          create.js
+                          index.js
+                          update.js
+                  chamados.js
+                  customers.js
+                  users.js
+              📂infraestructure/
+                  database.js
+                  rest_server.js
+              📂port/
+                  📂chamados/
+                      chamadosAPI.js
+                      chamadasRepo.js
+                  📂customers/
+                      customersAPI.js
+                      customersRepo.js
+                  📂users/
+                      usersAPI.js
+                      usersRepo.js
+          📂unitTest/
+              generateUuid.test.js
+              responseStatus.test.js
+              validationChamados.test.js
+              validationCustomers.test.js
+              validationUsers.test.js
+              📂objects/
+                  chamados_objects.js
+                  customers_objects.js
+                  users_objects.js
+          server.js
+          package.json
+          package-lock.json
 
-      App.js
-      index.js
-      setupTests.js
-      📂src/
-          📂assets/
-            avatar.png
-            cover.png
-            logo.png
-          📂components/
-            📂Header/
+        📂frontEnd/
+            📂public/
+            favicon.ico
+            index.html
+            logo192.png
+            logo512.png
+            manifest.json
+            robots.txt
+            📂src/
+                📂assets/
+                  avatar.png
+                  cover.png
+                  logo.png
+                📂components/
+                    📂Header/
+                      index.js
+                      style.css
+                    📂Modal/
+                      modal.js
+                      style.css
+                    📂Title/
+                      index.js
+                      style.css
+                📂contexts/
+                    auth.js
+                📂pages/
+                    📂Chamado/
+                        index.js
+                        style.css
+                    📂Customers/
+                        index.js
+                        style.css
+                    📂Dashboard/
+                        index.js
+                        style.css
+                    📂Profile/
+                        index.js
+                        style.css
+                    📂SignIn/
+                        index.js
+                        style.css
+                    📂SignUp/
+                        index.js
+                        style.css
+                📂routes/
+                  index.js
+                  Route.js
+                📂services/
+                  firebaseConnection.js
+              App.js
+              index.css
               index.js
-            📂Modal/
-              modal.js
-            📂Title/
-              index.js
-          📂contexts/
-            auth.js
-          📂pages/
-            📂Customers/
-              index.js
-            📂Dashboard/
-              index.js
-            📂New/
-              index.js
-            📂Profile/
-              index.js
-            📂SignIn/
-              index.js
-            📂SignUp/
-              index.js
-          📂routes/
-            index.js
-            Route.js
-          📂services/
-            firebaseConnection.js
+          .gitignore
+          package-lock.json
+          package.json
+          README.md
+      .gitignore
+      LICENSE
+      logo_readme.png
+      README.md
                   
   
-  O front-end da aplicação foi feito em React, utilizando de JavaScript, CSS e HTML. O back-end foi desenvolvido em JavaScript. 
+  O front-end da aplicação foi feito em React, utilizando de JavaScript, CSS e HTML. O back-end foi desenvolvido em Node.js. 
 
   Os testes de unidade foram desenvolvidos para o back-end apenas.
 
@@ -138,7 +219,7 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
 
 **Integração Contínua**: [GitHub Actions](https://github.com/features/actions)
 
-**Armazenamento de dados**: [Google Firebase](https://firebase.google.com/?hl=pt)
+**Armazenamento de dados**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2-dbterms?utm_source=google&utm_campaign=gs_americas_brazil_search_core_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624308&adgroup=115749705983&gclid=EAIaIQobChMIyJWU05Te9AIVlIaRCh34mgKNEAAYASAAEgJ0yfD_BwE)
 
 
 <!-- **Principais bibliotecas utilizadas**: 
