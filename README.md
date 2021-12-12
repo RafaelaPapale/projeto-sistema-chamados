@@ -275,4 +275,4 @@ O GitHub foi usado para controle de versão. Para as versões disponíveis, obse
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.txt](https://github.com/RafaelaPapale/projeto-sistema-chamados/blob/main/LICENSE) para detalhes.
 
-[![CI-Projeto-SistemasChamados](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml)](https://github.com/RafaelaPapale/projeto-sistema-chamados/blob/main/.github/workflows/node.js.yml)
+[![CI-Projeto-SistemasChamados](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml/badge.svg)](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml)
