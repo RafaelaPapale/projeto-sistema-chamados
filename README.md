@@ -270,9 +270,12 @@ O GitHub foi usado para controle de versão. Para as versões disponíveis, obse
 * **Rafaela de Moraes Papale** - [Rafaela](https://github.com/RafaelaPapale)
 * **Douglas Tavares Martins** - [Douglas](https://github.com/tavares-douglas)
 
-### 📄 Licença
+### 📄 Licença e CI
+
+- Licença
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://badges.mit-license.org/)
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.txt](https://github.com/RafaelaPapale/projeto-sistema-chamados/blob/main/LICENSE) para detalhes.
 
+- CI
 [![CI-Projeto-SistemasChamados](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml/badge.svg)](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml)
