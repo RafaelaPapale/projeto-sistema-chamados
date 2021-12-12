@@ -29,8 +29,15 @@ export default function Profile() {
         const update = await ClientUsers.updateUser(data);
         console.log(update);
         if (update.status === 200) {
-            setUser(update.data);
-            storageUser(update.data);
+            const data = {
+                nome: update.data.nome,
+                email: update.data.email,
+                uid: update.data.id,
+            }
+    
+            setUser(data);
+            console.log(user);
+            storageUser(data);
             toast.success('Usuário atualizado com sucesso!');
         } else {
             toast.error('Ops algo deu errado!');
