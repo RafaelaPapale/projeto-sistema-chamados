@@ -11,23 +11,30 @@
 ### ❗ Requisitos do projeto
 
 - [x] Orientação a objetos (React)
-- [x] Realizar um CRUD completo
+- [x] Realizar um CRUD
 - [x] Permanência de dados (MongoDB Atlas)
 - [x] Ferramenta de controle de versão (Github)
 - [x] Gerenciamento de dependências (npm)
 - [x] Testes de unidade
 - [x] Testes Mock
 - [x] CI (Github Actions)
-<!-- - [x] 2 Padrões de projeto (Mediator e Singleton) -->
 - [x] Arquitetura (React)
 
 ### 💻 Funcionalidades
 #### Usuário:
-- Cadastrar chamado
-- Buscar chamado
-- Editar chamado
-- Excluir chamado
+- Cadastrar usuário
+- Autenticar usuário
+- Editar usuário
 
+#### Customers (Cliente):
+- Cadastrar cliente
+- Listar todos os clientes
+
+#### Chamados:
+- Cadastrar chamado
+- Listar os chamados do usuário
+- Listar o chamado pelo ID
+- Editar chamado
 
 ### 🚀 Começando
 Para obter uma cópia do projeto a fim de operá-lo/testá-lo de sua máquina,clone o repositório em uma pasta na sua máquina:
@@ -40,34 +47,55 @@ $ git clone https://github.com/RafaelaPapale/projeto-sistema-chamados.git
 - npm 
 
 ### 🔧 Instalação e execução
-- [Instale node.js](https://nodejs.org/en/) :
-```
-npm install -g create-react-app
-```
+- [Instale node.js](https://nodejs.org/en/)
+
 - Ativação do gerenciamento de dependências:
-<p>Após a instalação, garanta que o terminal esteja no diretório da pasta principal do projeto. Para instalar as bibliotecas empregadas no projeto é necessário inserir o comando:</p>
+<p>O projeto foi dividido em duas pastas: BackEnd e FrontEnd.</p>
+<p>Para que o projeto funcione corretamente é preciso entrar no diretório de cada uma das pastas, instalar as bibliotecas e executar.</p>
+<p>Abaixo será explicado o passo a passo de como fazer.</p>
 
+- BackEnd
+<p>Após clonar, garanta que o terminal esteja no diretório da pasta principal do projeto.
+Depois disso, entre no diretório  "backEnd" através da linha de comando:</p>
 ```
-npm install -g yarn
+cd backEnd
+```
+<p>Estando no diretório backEnd, insira o seguinte comando para instalar as bibliotecas:</p>
+```
+npm install
 ```
 
-- Execução:
-<p>Para execução do servidor do projeto e acesso a API: </p>
-
+**Execução:**
+<p>Depois de instalar as bibliotecas,  execute o comando a seguir para subir o backEnd>:</p>
 ```
-npm start run
+npm start
 ```
 
-<p>Agora basta apenas acessar seu localhost na porta 8000 e ter sua experiância com a aplicação!</p>
+- FrontEnd
+<p>Após executar o backEnd, abra um novo terminal e garanta que o terminal esteja no diretório da pasta principal do projeto.
+Depois disso, entre no diretório "frontEnd" através da linha de comando:</p>
+```
+cd frontEnd
+```
+<p>Estando no diretório frontEnd, insira o seguinte comando para instalar as bibliotecas:</p>
+```
+npm install
+```
+
+**Execução:**
+<p>Depois de instalar as bibliotecas,  execute o comando a seguir para subir o frontEnd e ter acesso a aplicação:</p>
+```
+npm start
+```
+
+<p>Agora basta apenas acessar seu localhost na porta 5000 e ter sua experiância com a aplicação!</p>
 
 ### ⚙️ Executando os testes
-A implementação dos testes de unidade  foi feita utilizando o framework de teste para React chamado Jest e foram implementadas os casos de teste para front-end e back-end.
-
-**Para execução dos testes via uma IDE, basta executar o arquivo que contém os testes.**
+A implementação dos testes de unidade e mock foram feitas utilizando o framework de teste para Node.js chamado Jest e foram implementadas os casos de teste para back-end.
 
 **Para execução dos testes via terminal:**
 
-**1°)** Garanta que o terminal esteja aberto no diretório 'backend/tests' do projeto;
+**1°)** Garanta que o terminal esteja aberto no diretório 'backend' do projeto;
 
 **2°)** Nela deve ser executado o seguinte comando:
 ```
@@ -75,16 +103,21 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
 ```
 ...
 
-
-
-
 ### 📦 Desenvolvimento
-  A estrutura de pastas foi feita para atender ao formato esperado pelo React, assim, a estrutura da interface foi colocada na raiz do projeto (arquivos estáticos na pasta Static e arquivos html em Templates). Os demais arquivos foram organizados conforme seu tipo (main e test).
+  A estrutura de pastas foi feita para atender ao formato esperado pelo React e Node, assim, a estrutura da interface foi colocada na raiz do projeto (arquivos estáticos na pasta Static e arquivos html em Templates). Os demais arquivos foram organizados conforme seu tipo (main e test).
   Abaixo segue um esboço da estrutura usada:
   
   📂Projeto-Sistemas-Chamados/
       
       📂backEnd/
+          📂unitTest/
+              chamados.test.js
+              customers.test.js
+              users.test.js
+              📂objects/
+                  chamados_objects.js
+                  customers_objects.js
+                  users_objects.js
           📂src/
               📂application/
                   📂utils/
@@ -186,7 +219,10 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
                   index.js
                   Route.js
                 📂services/
-                  firebaseConnection.js
+                  config.js
+                  chamados.js
+                  user.js
+                  customers.js
               App.js
               index.css
               index.js
@@ -202,7 +238,7 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
   
   O front-end da aplicação foi feito em React, utilizando de JavaScript, CSS e HTML. O back-end foi desenvolvido em Node.js. 
 
-  Os testes de unidade foram desenvolvidos para o back-end apenas.
+  Os testes de unidade e mock foram desenvolvidos para o back-end apenas.
 
 
 ### 🛠️ Construído com
@@ -221,12 +257,6 @@ A implementação dos testes de unidade  foi feita utilizando o framework de tes
 
 **Armazenamento de dados**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2-dbterms?utm_source=google&utm_campaign=gs_americas_brazil_search_core_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624308&adgroup=115749705983&gclid=EAIaIQobChMIyJWU05Te9AIVlIaRCh34mgKNEAAYASAAEgJ0yfD_BwE)
 
-
-<!-- **Principais bibliotecas utilizadas**: 
-
- ... -->
-
-
 ### 📌 Versão
 O GitHub foi usado para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/RafaelaPapale/projeto-sistema-chamados/tags).
 
@@ -239,3 +269,5 @@ O GitHub foi usado para controle de versão. Para as versões disponíveis, obse
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://badges.mit-license.org/)
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.txt](https://github.com/SinaraPimenta/Projeto_C214_Armazem_MS/blob/main/LICENSE.txt) para detalhes.
+
+[![CI-Projeto-SistemasChamados](https://github.com/RafaelaPapale/projeto-sistema-chamados/actions/workflows/node.js.yml)](https://github.com/RafaelaPapale/projeto-sistema-chamados/blob/main/.github/workflows/node.js.yml)
