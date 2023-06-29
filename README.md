@@ -262,9 +262,6 @@ A implementação dos testes de unidade e mock foram feitas utilizando o framewo
 
 **Armazenamento de dados**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2-dbterms?utm_source=google&utm_campaign=gs_americas_brazil_search_core_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624308&adgroup=115749705983&gclid=EAIaIQobChMIyJWU05Te9AIVlIaRCh34mgKNEAAYASAAEgJ0yfD_BwE)
 
-### 📌 Versão
-O GitHub foi usado para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/RafaelaPapale/projeto-sistema-chamados/tags).
-
 ## ✒️ Autores
 
 * **Rafaela de Moraes Papale** - [Rafaela](https://github.com/RafaelaPapale)
